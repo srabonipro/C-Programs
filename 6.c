@@ -1,0 +1,47 @@
+// C program to find diameter, circumference and area of a circle using functions
+// define more than one user-defined functions in a single program
+
+
+#include <stdio.h>
+#include <math.h>
+
+
+double getDiameter(double radius);
+double getCircumference(double radius);
+double getArea(double radius);
+
+
+int main()
+{
+    float radius, diam, circ, area;
+
+    printf("Input radius: ");
+    scanf("%f", &radius);
+
+    diam = getDiameter(radius);
+    circ = getCircumference(radius);
+    area = getArea(radius);
+
+
+    printf("Diameter = %.2f units\n", diam);
+    printf("Circumference = %.2f units\n", circ);
+    printf("Area = %.2f sq. units", area);
+
+    return 0;
+}
+
+
+double getDiameter(double radius)
+{
+    return (2 * radius);
+}
+
+double getCircumference(double radius)
+{
+    return (2 * M_PI * radius); // M_PI = PI = 3.1416
+}
+
+double getArea(double radius)
+{
+    return (M_PI * radius * radius);
+}
